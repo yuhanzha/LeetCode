@@ -1,0 +1,8 @@
+class Solution(object):
+    def arrayPariSum(self, nums):
+        nums.sort()
+        min_sum = 0
+        for i in range(0, len(nums)-1, 2):
+            min_sum += nums[i]
+        return min_sum    
+        
