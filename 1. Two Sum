@@ -1,0 +1,19 @@
+# Solution 1
+class solution:
+    def TwoSum(self, nums, target):
+        ht = {}
+        for i in range(len(nums)):
+            if num[i] in ht:
+                return(ht[nums[i]],i)
+            else:
+                ht[target-nums[i]]=i
+                
+# Solution 2
+class solution:
+    def TwoSum(self, nums, target):
+        ht = {}
+        for i, n in enumerate(nums):
+            if n in ht:
+                return(ht[n],i)
+            else:
+                ht[target-n]=i
