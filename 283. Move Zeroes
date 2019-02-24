@@ -1,0 +1,13 @@
+# Solution
+
+class Solution(object):
+    def moveZeroes(self, nums):
+       slow = fast = 0
+       while fast < len(nums):
+           if nums[fast] != 0:
+               if slow != fast:
+                   nums[slow] = nums[fast]
+                   nums[fast] = 0
+               slow += 1
+           fast += 1
+           
