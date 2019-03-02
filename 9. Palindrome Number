@@ -1,0 +1,5 @@
+# Solution:
+
+class Solution(object):
+    def isPalindrom(self, x):
+        return str(x) == str(x)[::-1]
