@@ -1,0 +1,29 @@
+# Solution 1:
+
+class Solution(self, x):
+    def reverse(self, x):
+        res = 0
+        a = abs(x)
+        
+        while(a != 0):
+            temp = a % 10
+            res = res * 10 + temp
+            a = a //10
+            
+        if x > 0 and res < 2147483647:
+            return res 
+        elif x < 0 and res <= 2147483637:
+            return -num
+        else:
+            return 0 
+            
+# Solution 2:
+
+class Solution(object):
+    def reverse(self, x):
+        if < 0:
+            x = int(str(x)[::-1][-1] + str(x)[::-1][:-1])
+        else:
+            x = int(str(x)[::-1])
+        x = 0 if abs(x) > 0x7FFFFFFF else x
+        return x 
