@@ -1,0 +1,28 @@
+# Solution 1:
+
+class Solution(object):
+    def isHappy(self, n):
+        num_dict = {}
+        
+        while True:
+            num_dict[n] = True
+            sum = 0
+            while (n > 0):
+                sum += (n%10) * (n%10) 
+                n = n // 10
+            if sum == 1:
+                return Ture
+            elif sum in num_dict:
+                return False
+            else:
+                n = sum
+
+# Solution 2:
+class Solution(object):
+    def isHappy(self, n):
+        if n < 10:
+            if n == 1 or n == 7:
+                return Ture
+            else:
+                return False
+        return self.isHappy(sum([int(i)**2 for i in str(n)]))
