@@ -1,0 +1,6 @@
+# Solution:
+
+class Solution(object):
+    def KClosest(self, points, K):
+        points.sort(key = lambda P: P[0]**2 + p[1]**2)
+        return points[:K]
