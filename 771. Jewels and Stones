@@ -1,0 +1,12 @@
+# Solution 1:
+
+class Solution(object):
+    def numJewelsInStones(self, J, S):
+        return sum(s in J for s in S)
+        
+# Solution 2:
+
+class Solution(object):
+    def numJewelsInStones(self, J, S):
+        Jset = set(J)
+        return sum(s in Jset for s in S)
