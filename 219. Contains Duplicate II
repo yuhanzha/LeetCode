@@ -1,0 +1,25 @@
+# Soltuion 1:
+class Solution(object):
+    def containsNearbyDuplicate(self, nums, k):
+        ht = {}
+        for i, num in enumerate(nums):
+            if num not in ht:
+                ht[num] = i
+            else:
+                if i - ht[num] <= k:
+                    return True
+                ht[num] = i
+         return False
+         
+# Solution 2:
+class Solution(object):
+    def containsNearbyDuplicate(self, nums, k):
+        ht = {}
+        for i in range(len(nums)):
+            if nums[i] in ht and i - ht[nums[i]] <= k:
+                return True
+            else:
+                ht[nums[i]] = i
+        return False
+        
+       
